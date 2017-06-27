@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+
+        <TextView
+            style="@style/tv_style_help_desc"
+            android:layout_width="match_parent"
+            android:background="@color/green_light"
+            android:padding="@dimen/margin_10"
+            android:text="如何处理屏幕下方出现蓝底白字提示："
+            android:textColor="@color/green_deep_color"
+            android:textSize="@dimen/txt_14" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/margin_10"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_5">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:background="@color/colorPrimary"
+                android:padding="@dimen/margin_10"
+                android:text="未获取到初始化数据，请重新登录"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_12" />
+
+
+            <TextView
+                style="@style/tv_style_help_content"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/margin_5"
+                android:text="需要重新登录" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/bg_gray"
+            android:layout_margin="@dimen/margin_5" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_5">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:background="@color/colorPrimary"
+                android:padding="@dimen/margin_10"
+                android:text="登录成功，但是缺少参数，无法接受推送消息"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_12" />
+
+
+            <TextView
+                style="@style/tv_style_help_content"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/margin_5"
+                android:text="如果要想开启提送服务，请退出登录后，重新登录" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/bg_gray"
+            android:layout_margin="@dimen/margin_5" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_5">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:background="@color/colorPrimary"
+                android:padding="@dimen/margin_10"
+                android:text="导航尚未初始化!"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_12" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:background="@color/colorPrimary"
+                android:layout_marginTop="@dimen/margin_10"
+                android:padding="@dimen/margin_10"
+                android:text="缺少导航基本的权限!"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_12" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:background="@color/colorPrimary"
+                android:layout_marginTop="@dimen/margin_10"
+                android:padding="@dimen/margin_10"
+                android:text="没有开启导航需要的完备的权限!"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_12" />
+
+            <TextView
+                style="@style/tv_style_help_content"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/margin_5"
+                android:text="需要开启导航需要的权限：(允许本app申请的所有权限)" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

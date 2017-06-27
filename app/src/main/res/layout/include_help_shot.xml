@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/tv_style_help_desc"
+            android:layout_width="match_parent"
+            android:background="@color/green_light"
+            android:padding="@dimen/margin_10"
+            android:text="主页地图操作介绍："
+            android:textColor="@color/green_deep_color"
+            android:textSize="@dimen/txt_14" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/margin_30"
+            android:paddingLeft="@dimen/margin_30"
+            android:paddingBottom="@dimen/margin_10"
+            android:paddingTop="@dimen/margin_10"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_home1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/img_home1"
+                android:scaleType="fitXY" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@color/green_light"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/margin_30"
+            android:padding="@dimen/margin_10"
+            android:text="站点和轨迹展示介绍："
+            android:textColor="@color/green_deep_color"
+            android:textSize="@dimen/txt_14" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/margin_30"
+            android:paddingLeft="@dimen/margin_30"
+            android:paddingBottom="@dimen/margin_10"
+            android:paddingTop="@dimen/margin_10"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_home2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/img_home2"
+                android:scaleType="fitXY" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@color/green_light"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/margin_30"
+            android:padding="@dimen/margin_10"
+            android:text="站点点击展示介绍："
+            android:textColor="@color/green_deep_color"
+            android:textSize="@dimen/txt_14" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/margin_30"
+            android:paddingLeft="@dimen/margin_30"
+            android:paddingBottom="@dimen/margin_10"
+            android:paddingTop="@dimen/margin_10"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/tv_style_help_content"
+                android:layout_marginTop="@dimen/margin_5"
+                android:padding="@dimen/margin_5"
+                android:text="屏幕底部的5个按钮用途："
+                android:textStyle="bold" />
+
+            <TextView
+                style="@style/tv_style_help_content"
+                android:padding="@dimen/margin_5"
+                android:text="1. 历史： 查询该站点的历史轨迹" />
+
+            <TextView
+                style="@style/tv_style_help_content"
+                android:padding="@dimen/margin_5"
+                android:text="2. 实时：查询该站点的实时轨迹" />
+
+            <TextView
+                style="@style/tv_style_help_content"
+                android:padding="@dimen/margin_5"
+                android:text="3. 告警：查询该站点的历史告警" />
+
+            <TextView
+                style="@style/tv_style_help_content"
+                android:padding="@dimen/margin_5"
+                android:text="4. 路线：导航到该站点位置" />
+
+            <TextView
+                style="@style/tv_style_help_content"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:padding="@dimen/margin_5"
+                android:text="5. 实时：查看该站点详情" />
+
+            <ImageView
+                android:id="@+id/iv_home3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/img_home3"
+                android:scaleType="fitXY" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@color/green_light"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/margin_30"
+            android:padding="@dimen/margin_10"
+            android:text="开启通知栏权限介绍："
+            android:textColor="@color/green_deep_color"
+            android:textSize="@dimen/txt_14" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/margin_30"
+            android:paddingLeft="@dimen/margin_30"
+            android:paddingBottom="@dimen/margin_10"
+            android:paddingTop="@dimen/margin_10"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/tv_style_help_content"
+                android:layout_marginTop="@dimen/margin_5"
+                android:padding="@dimen/margin_5"
+                android:text="1. 打开手机：设置-通知和状态-应用通知管理-选择'蓄电池防盗定位'" />
+
+            <TextView
+                style="@style/tv_style_help_content"
+                android:padding="@dimen/margin_5"
+                android:text="2. 勾选截图中红框框住的选项" />
+
+            <TextView
+                style="@style/tv_style_help_desc"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="(注意：不同手机进入该设置页面的方式略有不同)" />
+
+
+            <ImageView
+                android:id="@+id/iv_set_notify"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/img_set_notify"
+                android:scaleType="fitXY" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

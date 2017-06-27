@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 告警筛选条件 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <!-- 省 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_15"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_5"
+        android:paddingTop="@dimen/margin_10"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/tv_style_selections"
+            android:text=" 省："
+            android:textColor="@color/gray" />
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/spinner_province"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_36"
+            android:layout_marginRight="@dimen/margin_20"
+            android:background="@color/white_light"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/margin_8"
+            android:paddingRight="@dimen/margin_8"
+            android:spinnerMode="dropdown"
+            android:text=""
+            android:theme="@style/common_spinner" />
+
+    </LinearLayout>
+
+    <!-- 市 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_15"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_5"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/tv_style_selections"
+            android:text=" 市："
+            android:textColor="@color/gray" />
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/spinner_city"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_36"
+            android:layout_marginRight="@dimen/margin_20"
+            android:background="@color/white_light"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/margin_8"
+            android:paddingRight="@dimen/margin_8"
+            android:spinnerMode="dropdown"
+            android:text=""
+            android:theme="@style/common_spinner" />
+
+    </LinearLayout>
+
+    <!-- 县 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_15"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_5"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/tv_style_selections"
+            android:text=" 县："
+            android:textColor="@color/gray" />
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/spinner_county"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_36"
+            android:layout_marginRight="@dimen/margin_20"
+            android:background="@color/white_light"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/margin_8"
+            android:paddingRight="@dimen/margin_8"
+            android:spinnerMode="dropdown"
+            android:text=""
+            android:theme="@style/common_spinner" />
+
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/lv_region"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@color/gray_light"
+        android:dividerHeight="0.5dp"
+        android:listSelector="@color/blue_light" />
+
+</LinearLayout>
+
+
+

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        style="@style/layout_style_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_title_prov"
+            style="@style/tv_style_selections"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="省：" />
+
+        <Spinner
+            android:id="@+id/spinner_prov"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_40"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_10"
+            android:layout_toRightOf="@+id/tv_title_prov"
+            android:background="@null" />
+
+        <ImageView
+            android:layout_width="@dimen/margin_15"
+            android:layout_height="@dimen/margin_15"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_10"
+            android:src="@drawable/right_jiantou" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/layout_style_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_title_city"
+            style="@style/tv_style_selections"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="市：" />
+
+        <Spinner
+            android:id="@+id/spinner_city"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_40"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_10"
+            android:layout_toRightOf="@+id/tv_title_city"
+            android:background="@null" />
+
+        <ImageView
+            android:layout_width="@dimen/margin_15"
+            android:layout_height="@dimen/margin_15"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_10"
+            android:src="@drawable/right_jiantou" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/layout_style_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_title_dist"
+            style="@style/tv_style_selections"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="县：" />
+
+        <Spinner
+            android:id="@+id/spinner_dist"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_40"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:layout_marginRight="@dimen/margin_10"
+            android:layout_toRightOf="@+id/tv_title_dist"
+            android:background="@null" />
+
+        <ImageView
+            android:layout_width="@dimen/margin_15"
+            android:layout_height="@dimen/margin_15"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_10"
+            android:src="@drawable/right_jiantou" />
+    </RelativeLayout>
+
+</LinearLayout>

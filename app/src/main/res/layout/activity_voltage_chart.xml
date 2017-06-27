@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.thdz.bt.ui.ChartPowerActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:title="@string/str_device_power"
+            android:titleTextColor="@color/white"
+            app:popupTheme="@style/ToolBarStyle"
+            app:titleTextAppearance="@style/Toolbar.TitleText" />
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_light"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="站点名称："
+                android:paddingTop="@dimen/margin_12"
+                android:paddingBottom="@dimen/margin_12"
+                android:paddingLeft="@dimen/margin_10"
+                android:paddingRight="@dimen/margin_10"
+                android:textColor="@color/black_light"
+                android:textSize="@dimen/txt_12" />
+
+            <TextView
+                android:id="@+id/tv_chart_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:lineSpacingExtra="@dimen/margin_5"
+                android:paddingTop="@dimen/margin_12"
+                android:paddingBottom="@dimen/margin_12"
+                android:textColor="@color/black_light"
+                android:textSize="@dimen/txt_14"
+                tools:text="河北省保定市新市区第一中心医院站" />
+        </LinearLayout>
+
+
+        <include layout="@layout/layout_select_time" />
+
+        <LinearLayout
+            android:id="@+id/layout_selections_time2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_5">
+
+            <TextView
+                android:id="@+id/btn_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_weight="1"
+                android:background="@drawable/bg_ripple"
+                android:clickable="true"
+                android:gravity="center"
+                android:padding="@dimen/margin_10"
+                android:text="查询"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_14" />
+
+            <TextView
+                android:id="@+id/btn_search_test"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_weight="2"
+                android:background="@drawable/btn_red_selector"
+                android:clickable="true"
+                android:gravity="center"
+                android:padding="@dimen/margin_10"
+                android:text="测试数据"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_14"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_chart_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_chart_title"
+            android:background="@color/white_light"
+            android:lineSpacingExtra="@dimen/margin_5"
+            android:padding="@dimen/margin_10"
+            android:text="横轴: 时间\n纵轴: 电压(单位：V)"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/txt_12"
+            android:visibility="gone" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chart1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_3"
+            android:layout_weight="1"
+            android:background="@color/white" />
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_15"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/tv_style_detail"
+            android:text="名称：" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/tv_style_detail"
+            android:layout_width="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:layout_marginRight="@dimen/margin_10"
+            android:gravity="center_vertical|right"
+            tools:text="名称" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/tv_style_detail"
+            android:text="状态：" />
+
+
+        <TextView
+            android:id="@+id/tv_alarm_state"
+            style="@style/tv_style_detail"
+            android:layout_width="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:layout_marginRight="@dimen/margin_10"
+            android:gravity="center_vertical|right"
+            tools:text="正常" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/tv_style_detail"
+            android:text="地址号：" />
+
+        <TextView
+            android:id="@+id/tv_addr"
+            style="@style/tv_style_detail"
+            android:layout_width="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:layout_marginRight="@dimen/margin_10"
+            android:gravity="center_vertical|right"
+            tools:text="12" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/tv_style_detail"
+            android:text="经度：" />
+
+        <TextView
+            android:id="@+id/tv_point_lon"
+            style="@style/tv_style_detail"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="@dimen/margin_10"
+            android:layout_weight="1"
+            android:gravity="center_vertical|right"
+            tools:text="经" />
+
+        <TextView
+            style="@style/tv_style_detail"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:text="纬度：" />
+
+        <TextView
+            android:id="@+id/tv_point_lat"
+            style="@style/tv_style_detail"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="@dimen/margin_10"
+            android:layout_weight="1"
+            android:gravity="center_vertical|right"
+            tools:text="纬" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/tv_style_detail"
+            android:text="Sim卡:" />
+
+        <TextView
+            android:id="@+id/tv_tel"
+            style="@style/tv_style_detail"
+            android:layout_width="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:layout_marginRight="@dimen/margin_10"
+            android:gravity="center_vertical|right"
+            tools:text="24141" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/tv_style_detail"
+            android:text="最新电压:" />
+
+        <TextView
+            android:id="@+id/tv_power"
+            style="@style/tv_style_detail"
+            android:layout_width="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:layout_marginRight="@dimen/margin_10"
+            android:gravity="center_vertical|right"
+            tools:text="12v" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/tv_style_detail"
+            android:text="通讯方式:" />
+
+        <TextView
+            android:id="@+id/tv_com_way"
+            style="@style/tv_style_detail"
+            android:layout_width="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:layout_marginRight="@dimen/margin_10"
+            android:gravity="center_vertical|right"
+            tools:text="通讯方式" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/tv_style_detail"
+            android:text="最后通讯时间:" />
+
+        <TextView
+            android:id="@+id/tv_com_time"
+            style="@style/tv_style_detail"
+            android:layout_width="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:layout_marginRight="@dimen/margin_10"
+            android:gravity="center_vertical|right"
+            tools:text="最后通讯时间" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_light" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_5"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="0.3" />
+
+        <TextView
+            android:id="@+id/btn_trace"
+            style="@style/tv_style_station_bottom"
+            android:drawableTop="@drawable/ic_foot_black"
+            android:text="历史"
+            android:textColor="@color/black_light" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/btn_sure"
+            style="@style/tv_style_station_bottom"
+            android:drawableTop="@drawable/ic_foot_black"
+            android:text="实时"
+            android:textColor="@color/black_light" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/btn_alarm_his"
+            style="@style/tv_style_station_bottom"
+            android:drawableTop="@drawable/ic_alarm_black"
+            android:text="告警"
+            android:textColor="@color/black_light" />
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/btn_route"
+            style="@style/tv_style_station_bottom"
+            android:drawableTop="@drawable/ic_navi_black"
+            android:text="路线"
+            android:textColor="@color/black_light" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/btn_detail"
+            style="@style/tv_style_station_bottom"
+            android:drawableTop="@drawable/ic_detail_black"
+            android:text="详情"
+            android:textColor="@color/black_light" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="0.3" />
+    </LinearLayout>
+</LinearLayout>

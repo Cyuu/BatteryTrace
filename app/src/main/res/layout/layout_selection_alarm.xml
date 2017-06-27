@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 告警筛选条件 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/margin_10"
+    android:layout_marginRight="@dimen/margin_10"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/layout_selectaion_region"
+        layout="@layout/common_region_select" />
+
+
+    <include
+        android:id="@+id/layout_time_part"
+        layout="@layout/layout_select_time" />
+
+    <!-- 类型 -->
+    <LinearLayout
+        android:id="@+id/layout_selections_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_5">
+
+        <TextView
+            style="@style/tv_style_selections"
+            android:text="类型：" />
+
+        <com.thdz.bt.view.ChoiceGroup
+            android:id="@+id/group_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_selections_time2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:padding="@dimen/margin_10">
+
+        <TextView
+            android:id="@+id/btn_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_ripple"
+            android:clickable="true"
+            android:gravity="center"
+            android:padding="@dimen/margin_10"
+            android:text="查询"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_14" />
+
+    </RelativeLayout>
+
+</LinearLayout>
+
+
+

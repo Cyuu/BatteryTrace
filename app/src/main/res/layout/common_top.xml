@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common_top_height"
+    android:background="@color/blue_color"
+    android:clipChildren="false"
+    android:elevation="@dimen/margin_5"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:text=" "
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_18" />
+
+    <ImageView
+        android:id="@+id/iv_left"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/app_name"
+        android:paddingLeft="@dimen/margin_15"
+        android:paddingRight="@dimen/margin_10"
+        android:src="@drawable/icon_fanhui" />
+
+    <ImageView
+        android:id="@+id/iv_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:contentDescription="@string/app_name"
+        android:visibility="gone"
+        android:padding="@dimen/margin_8"
+        android:src="@drawable/ic_refresh" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/gray"
+        android:visibility="gone" />
+
+</RelativeLayout>

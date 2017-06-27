@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.StationDetailActivity"
+    tools:showIn="@layout/activity_station_detail">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:layout_marginTop="@dimen/margin_10"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/tv_style_map_detail_title"
+                android:text="站点：" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/tv_style_detail"
+                android:layout_width="match_parent"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_5"
+                android:gravity="center_vertical|right"
+                tools:text="名称" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/tv_style_map_detail_title"
+                android:text="地址：" />
+
+            <TextView
+                android:id="@+id/tv_addr"
+                style="@style/tv_style_detail"
+                android:layout_width="match_parent"
+                android:layout_marginRight="@dimen/margin_10"
+                android:gravity="center_vertical|right"
+                tools:text="地址" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/tv_style_map_detail_title"
+                android:text="所属区域：" />
+
+            <TextView
+                android:id="@+id/tv_region"
+                style="@style/tv_style_detail"
+                android:layout_width="match_parent"
+                android:layout_marginRight="@dimen/margin_10"
+                android:gravity="center_vertical|right"
+                tools:text="区域" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/tv_style_map_detail_title"
+                android:text="经度：" />
+
+            <TextView
+                android:id="@+id/tv_point_lon"
+                style="@style/tv_style_detail"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                tools:text="经" />
+
+            <TextView
+                style="@style/tv_style_map_detail_title"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:text="纬度：" />
+
+            <TextView
+                android:id="@+id/tv_point_lat"
+                style="@style/tv_style_detail"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                tools:text="纬" />
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/tv_style_map_detail_title"
+                android:text="Sim卡：" />
+
+            <TextView
+                android:id="@+id/tv_simcard"
+                style="@style/tv_style_detail"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/margin_3"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                tools:text="1231241241" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/tv_style_map_detail_title"
+                android:text="心跳时间间隔：" />
+
+            <TextView
+                android:id="@+id/tv_tick_time"
+                style="@style/tv_style_detail"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/margin_3"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                tools:text="3" />
+
+            <TextView
+                style="@style/tv_style_detail"
+                android:layout_marginLeft="-5dp"
+                android:layout_marginRight="@dimen/margin_10"
+                android:text="小时" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/tv_style_map_detail_title"
+                android:text="震动告警时间间隔：" />
+
+            <TextView
+                android:id="@+id/tv_upload_time"
+                style="@style/tv_style_detail"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/margin_3"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                tools:text="3" />
+
+            <TextView
+                style="@style/tv_style_detail"
+                android:layout_marginLeft="-5dp"
+                android:layout_marginRight="@dimen/margin_10"
+                android:text="秒" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/tv_style_map_detail_title"
+                android:text="低压告警时间间隔：" />
+
+            <TextView
+                android:id="@+id/tv_lowpower_time"
+                style="@style/tv_style_detail"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/margin_3"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                tools:text="3" />
+
+            <TextView
+                style="@style/tv_style_detail"
+                android:layout_marginLeft="-5dp"
+                android:layout_marginRight="@dimen/margin_10"
+                android:text="秒" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/tv_style_map_detail_title"
+                android:text="位移告警时间间隔：" />
+
+            <TextView
+                android:id="@+id/tv_move_time"
+                style="@style/tv_style_detail"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/margin_3"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                tools:text="3" />
+
+            <TextView
+                style="@style/tv_style_detail"
+                android:layout_marginLeft="-5dp"
+                android:layout_marginRight="@dimen/margin_10"
+                android:text="秒" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/tv_style_map_detail_title"
+                android:text="电压低压阈值：" />
+
+            <TextView
+                android:id="@+id/tv_lowpower_value"
+                style="@style/tv_style_detail"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/margin_3"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                tools:text="3" />
+
+            <TextView
+                style="@style/tv_style_detail"
+                android:layout_marginLeft="-5dp"
+                android:layout_marginRight="@dimen/margin_10"
+                android:text="伏特" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/tv_style_map_detail_title"
+                android:text="位移告警阈值：" />
+
+            <TextView
+                android:id="@+id/tv_move_alarm_value"
+                style="@style/tv_style_detail"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/margin_3"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                tools:text="3" />
+
+            <TextView
+                style="@style/tv_style_detail"
+                android:layout_marginLeft="-5dp"
+                android:layout_marginRight="@dimen/margin_10"
+                android:text="米" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/tv_style_map_detail_title"
+                android:text="GPRS通讯服务IP：" />
+
+            <TextView
+                android:id="@+id/tv_conn_ip"
+                style="@style/tv_style_detail"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/margin_3"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                tools:text="3" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/tv_style_map_detail_title"
+                android:text="GPRS通讯服务端口：" />
+
+            <TextView
+                android:id="@+id/tv_conn_port"
+                style="@style/tv_style_detail"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/margin_3"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                tools:text="3" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/tv_style_map_detail_title"
+                android:text="服务程序名称：" />
+
+            <TextView
+                android:id="@+id/tv_term_name"
+                style="@style/tv_style_detail"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/margin_3"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                tools:text="名称" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/tv_style_map_detail_title"
+                android:text="最新电压：" />
+
+            <TextView
+                android:id="@+id/tv_power"
+                style="@style/tv_style_detail"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/margin_3"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                tools:text="12" />
+
+            <TextView
+                style="@style/tv_style_detail"
+                android:layout_marginLeft="-5dp"
+                android:layout_marginRight="@dimen/margin_10"
+                android:text="伏特" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/tv_style_map_detail_title"
+                android:text="通讯方式：" />
+
+            <TextView
+                android:id="@+id/tv_commtype"
+                style="@style/tv_style_detail"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/margin_3"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:text="GPRS" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/tv_style_map_detail_title"
+                android:text="最后通信时间：" />
+
+            <TextView
+                android:id="@+id/tv_commtime"
+                style="@style/tv_style_map_detail_title"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/margin_3"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:textColor="@color/black_light"
+                tools:text="2017-12-12 12:12:12" />
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_bg" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/tv_style_map_detail_title"
+                android:text="联系人:" />
+
+            <TextView
+                android:id="@+id/tv_contact_title"
+                style="@style/tv_style_detail"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:text="无"
+                android:textColor="@color/red_color"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+
+        <!--联系人列表-->
+        <com.thdz.bt.view.NoScrollListView
+            android:id="@+id/lv_contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_20"
+            android:cacheColorHint="@color/transparent"
+            android:divider="@color/gray_bg"
+            android:dividerHeight="0.5dp"
+            android:listSelector="@color/transparent" />
+
+    </LinearLayout>
+</ScrollView>

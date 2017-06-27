@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="alarm_type">
+        <item >全部</item>
+        <item >低压告警</item>
+        <item >位移告警</item>   <!-- &amp; 特殊字符要转义-->
+        <item> 震动告警</item>
+        <item> 失联告警</item>
+        <item> 失联恢复</item>
+    </string-array>
+
+    <integer-array name="alarm_type_id">
+        <item >-1</item>
+        <item >0</item>
+        <item >1</item>
+        <item >2</item>
+        <item >7</item>
+        <item >8</item>
+    </integer-array>
+
+
+</resources>

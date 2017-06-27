@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_5">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_5">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/colorPrimary"
+                android:padding="@dimen/margin_5"
+                android:src="@drawable/ic_baojing" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/tv_style_help_content"
+                    android:text="查询当前告警" />
+
+                <TextView
+                    style="@style/tv_style_help_desc"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="主页 - 标题栏右侧" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_5">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/colorPrimary"
+                android:padding="@dimen/margin_5"
+                android:src="@drawable/setting" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/tv_style_help_content"
+                    android:text="进入个人中心页面" />
+
+                <TextView
+                    style="@style/tv_style_help_desc"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="主页 - 标题栏右侧" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_5">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/colorPrimary"
+                android:padding="@dimen/margin_5"
+                android:src="@drawable/ic_line_chart" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/tv_style_help_content"
+                    android:text="查询站点电压曲线图" />
+
+                <TextView
+                    style="@style/tv_style_help_desc"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="站点详情页 - 标题栏右侧" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_5">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/colorPrimary"
+                android:padding="@dimen/margin_5"
+                android:src="@drawable/ic_refresh" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/tv_style_help_content"
+                    android:text="页面刷新" />
+
+                <TextView
+                    style="@style/tv_style_help_desc"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="站点详情页 - 标题栏右侧" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_5">
+
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_5"
+                app:fabSize="mini"
+                app:rippleColor="@color/white"
+                app:srcCompat="@drawable/crm_foot" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/tv_style_help_content"
+                    android:text="清除历史/实时轨迹" />
+
+                <TextView
+                    style="@style/tv_style_help_desc"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="主页-地图页" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_5">
+
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_5"
+                app:fabSize="mini"
+                app:rippleColor="@color/white"
+                app:srcCompat="@drawable/ic_info" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/tv_style_help_content"
+                    android:text="清除站点/轨迹Marker的提示信息" />
+
+                <TextView
+                    style="@style/tv_style_help_desc"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="主页-地图页" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_5">
+
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/margin_5"
+                app:fabSize="mini"
+                app:srcCompat="@drawable/ic_loc_white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/tv_style_help_content"
+                    android:text="定位,回到当前位置" />
+
+                <TextView
+                    style="@style/tv_style_help_desc"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="主页-地图页" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_5">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:background="@drawable/bg_border_blue"
+                android:padding="@dimen/margin_5"
+                android:text="选择起止时间"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_12" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/tv_style_help_content"
+                    android:text="查询历史轨迹时,选择起止时间" />
+
+                <TextView
+                    style="@style/tv_style_help_desc"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="主页-地图页" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

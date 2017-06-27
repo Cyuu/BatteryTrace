@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="@color/gray_bg" />
+
+    <!-- 时间 -->
+    <RelativeLayout
+        android:id="@+id/layout_selections_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:padding="@dimen/margin_5">
+
+        <TextView
+            android:id="@+id/tv_select_time_title"
+            style="@style/tv_style_selections"
+            android:text="开始时间：" />
+
+        <EditText
+            android:id="@+id/tv_select_time_start"
+            style="@style/tv_style_selections"
+            android:layout_width="match_parent"
+            android:layout_marginRight="@dimen/margin_15"
+            android:layout_toRightOf="@+id/tv_select_time_title"
+            android:background="@color/transparent"
+            android:editable="false"
+            android:hint="戳我选择 开始时间" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_bg" />
+
+    <!-- 时间 -->
+    <RelativeLayout
+        android:id="@+id/layout_selections_time2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:padding="@dimen/margin_5">
+
+        <TextView
+            android:id="@+id/tv_select_time_title2"
+            style="@style/tv_style_selections"
+            android:text="结束时间：" />
+
+        <EditText
+            android:id="@+id/tv_select_time_end"
+            style="@style/tv_style_selections"
+            android:layout_width="match_parent"
+            android:layout_marginRight="@dimen/margin_15"
+            android:layout_toRightOf="@+id/tv_select_time_title2"
+            android:background="@color/transparent"
+            android:editable="false"
+            android:hint="戳我选择 结束时间" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_bg" />
+</LinearLayout>

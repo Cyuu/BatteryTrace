@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 站点筛选条件 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- 站点 -->
+    <LinearLayout
+        android:id="@+id/layout_selections_stations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/margin_10">
+
+        <TextView
+            style="@style/tv_style_selections"
+            android:text=" 省：" />
+
+        <EditText
+            android:id="@+id/tv_select_province"
+            style="@style/tv_style_selections"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_20"
+            android:background="@drawable/bg_border_white_stroke_black"
+            android:editable="false"
+            android:gravity="center_vertical"
+            android:hint="戳我选择 省"
+            android:textColorHint="@color/gray" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/margin_15"
+        android:layout_marginRight="@dimen/margin_15"
+        android:background="@color/gray_bg" />
+
+    <!-- 站点 -->
+    <LinearLayout
+        android:id="@+id/layout_selections_stations2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/margin_10">
+
+        <TextView
+            style="@style/tv_style_selections"
+            android:text=" 市：" />
+
+        <EditText
+            android:id="@+id/tv_select_city"
+            style="@style/tv_style_selections"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_20"
+            android:background="@drawable/bg_border_white_stroke_black"
+            android:editable="false"
+            android:gravity="left|center_vertical"
+            android:hint="戳我选择 市"
+            android:textColorHint="@color/gray" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/margin_15"
+        android:layout_marginRight="@dimen/margin_15"
+        android:background="@color/gray_bg" />
+
+    <!-- 站点 -->
+    <LinearLayout
+        android:id="@+id/layout_selections_stations3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/margin_10">
+
+        <TextView
+            style="@style/tv_style_selections"
+            android:text=" 县：" />
+
+        <EditText
+            android:id="@+id/tv_select_county"
+            style="@style/tv_style_selections"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_20"
+            android:background="@drawable/bg_border_white_stroke_black"
+            android:editable="false"
+            android:gravity="left|center_vertical"
+            android:hint="戳我选择 县"
+            android:textColorHint="@color/gray" />
+
+    </LinearLayout>
+
+    <!-- 名称 -->
+    <RelativeLayout
+        android:id="@+id/layout_selections_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/margin_10"
+        android:paddingTop="@dimen/margin_10">
+
+        <TextView
+            android:id="@+id/et_name_title"
+            style="@style/tv_style_selections"
+            android:text="名称：" />
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/btn_search"
+            android:layout_toRightOf="@+id/et_name_title"
+            android:background="@drawable/bg_border_white_stroke_black"
+            android:hint="请输入名称关键字"
+            android:padding="@dimen/margin_10"
+            android:textColor="@color/black_light"
+            android:textColorHint="@color/gray"
+            android:textSize="@dimen/txt_14" />
+
+        <TextView
+            android:id="@+id/btn_search"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_10"
+            android:background="@drawable/bg_ripple"
+            android:clickable="true"
+            android:gravity="center"
+            android:padding="@dimen/margin_10"
+            android:text="查询"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_14" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_light" />
+</LinearLayout>
+
+
+

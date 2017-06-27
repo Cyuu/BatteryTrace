@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants">
+
+    <View
+        android:id="@+id/item_state"
+        android:layout_width="@dimen/margin_8"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/stn_layout_right"
+        android:layout_alignTop="@+id/stn_layout_right"
+        android:layout_marginRight="@dimen/margin_8"
+        android:background="@color/red" />
+
+    <LinearLayout
+        android:id="@+id/stn_layout_right"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/item_state"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/margin_3"
+            android:layout_marginTop="@dimen/margin_5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/item_name"
+                style="@style/tv_style_device"
+                android:layout_width="match_parent"
+                android:layout_toLeftOf="@+id/tv_alarm_type"
+                android:gravity="left"
+                android:text="第一中心医院北A" />
+
+
+            <TextView
+                android:id="@+id/tv_alarm_type"
+                style="@style/tv_style_device"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:maxLength="10"
+                android:visibility="gone"
+                android:singleLine="true"
+                android:textColor="@color/red_color"
+                tools:text="丢失告警" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:layout_marginTop="@dimen/margin_3"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/tv_style_device"
+                android:text="区域:"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/txt_10" />
+
+            <TextView
+                android:id="@+id/item_region"
+                style="@style/tv_style_device"
+                android:textSize="@dimen/txt_10"
+                tools:text="河北-保定" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:layout_marginTop="@dimen/margin_3"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/tv_style_device"
+                android:text="地址号:"
+                android:textColor="@color/gray" />
+
+            <TextView
+                android:id="@+id/item_addr"
+                style="@style/tv_style_device"
+                tools:text="112" />
+
+            <TextView
+                style="@style/tv_style_device"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:text="Sim卡:"
+                android:textColor="@color/gray" />
+
+            <TextView
+                android:id="@+id/item_simcard"
+                style="@style/tv_style_device"
+                tools:text="12341321212" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:layout_marginRight="@dimen/margin_5"
+            android:layout_marginTop="@dimen/margin_3"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/tv_style_device"
+                android:text="经度:"
+                android:textColor="@color/gray" />
+
+
+            <TextView
+                android:id="@+id/item_lon"
+                style="@style/tv_style_device"
+                tools:text="38.927763" />
+
+            <TextView
+                style="@style/tv_style_device"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:text="纬度:"
+                android:textColor="@color/gray" />
+
+
+            <TextView
+                android:id="@+id/item_lat"
+                style="@style/tv_style_device"
+                tools:text="115.469205" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="@dimen/margin_5"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:layout_marginRight="@dimen/margin_5"
+            android:layout_marginTop="@dimen/margin_3"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/tv_style_device"
+                android:text="电池类型:"
+                android:textColor="@color/gray" />
+
+            <TextView
+                android:id="@+id/item_battery_type"
+                style="@style/tv_style_device"
+                android:textColor="@color/black_light"
+                tools:text="蓄电池12V" />
+
+            <TextView
+                style="@style/tv_style_device"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:text="电压值:"
+                android:textColor="@color/gray" />
+
+            <TextView
+                android:id="@+id/item_power"
+                style="@style/tv_style_device"
+                tools:text="12V" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

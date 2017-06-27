@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.HomeActivity"
+    tools:showIn="@layout/activity_home">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:id="@+id/layout_mapview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_select_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_10"
+                android:background="@drawable/bg_border_blue"
+                android:paddingBottom="@dimen/margin_5"
+                android:paddingLeft="@dimen/margin_10"
+                android:paddingRight="@dimen/margin_10"
+                android:paddingTop="@dimen/margin_5"
+                android:text="选择起止时间"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_12" />
+
+
+            <com.baidu.mapapi.map.MapView
+                android:id="@+id/mapview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true" />
+
+            <ImageView
+                android:id="@+id/tv_alarm_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/margin_50"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:background="@drawable/bg_circle_white"
+                android:padding="@dimen/margin_5"
+                android:visibility="gone"
+                android:src="@drawable/ic_baojing_red" />
+
+
+            <!--<Button-->
+                <!--android:id="@+id/btn1"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentBottom="true"-->
+                <!--android:layout_marginBottom="200dp"-->
+                <!--android:layout_marginLeft="@dimen/margin_20"-->
+                <!--android:text="开启动画"/>-->
+
+            <!--<Button-->
+                <!--android:id="@+id/btn2"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentBottom="true"-->
+                <!--android:layout_marginBottom="280dp"-->
+                <!--android:layout_marginLeft="@dimen/margin_20"-->
+                <!--android:text="清除动画"/>-->
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/margin_15"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fab_clear_trace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_5"
+                    app:fabSize="mini"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/crm_foot" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="0.5" />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fab_clear_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_5"
+                    app:fabSize="mini"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_info" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="0.5" />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fab_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/margin_5"
+                    app:fabSize="mini"
+                    app:srcCompat="@drawable/ic_loc_white" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <com.orangegangsters.github.swipyrefreshlayout.library.SwipyRefreshLayout
+            android:id="@+id/swipy_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/margin_10"
+            android:paddingRight="@dimen/margin_10"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/common_region_select" />
+
+                    <!-- 名称 -->
+                    <RelativeLayout
+                        android:id="@+id/layout_selections_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/margin_10"
+                        android:paddingTop="@dimen/margin_10">
+
+                        <TextView
+                            android:id="@+id/et_name_title"
+                            style="@style/tv_style_selections"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/margin_5"
+                            android:text="名称：" />
+
+                        <EditText
+                            android:id="@+id/et_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/margin_15"
+                            android:layout_toRightOf="@+id/et_name_title"
+                            android:background="@drawable/bg_border_white_stroke_black"
+                            android:hint="站点名称 或 站点编号"
+                            android:padding="@dimen/margin_8"
+                            android:textColor="@color/black_light"
+                            android:textColorHint="@color/gray"
+                            android:textSize="@dimen/txt_12" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white">
+
+                        <TextView
+                            android:id="@+id/btn_search"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/margin_10"
+                            android:layout_marginLeft="@dimen/margin_10"
+                            android:layout_marginRight="@dimen/margin_10"
+                            android:background="@drawable/bg_ripple"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:padding="@dimen/margin_10"
+                            android:text="查询"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/txt_14" />
+
+                    </RelativeLayout>
+
+                    <com.thdz.bt.view.NoScrollListView
+                        android:id="@+id/lv_stations"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:cacheColorHint="@color/transparent"
+                        android:divider="@color/transparent"
+                        android:dividerHeight="@dimen/margin_10"
+                        android:listSelector="@color/transparent"
+                        android:paddingTop="@dimen/margin_10" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </com.orangegangsters.github.swipyrefreshlayout.library.SwipyRefreshLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_light" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:padding="@dimen/margin_3">
+
+        <RadioGroup
+            android:id="@+id/rg_map_stations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/margin_3"
+            android:layout_marginTop="@dimen/margin_3"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rb_blue_gray_left_selector"
+                android:button="@null"
+                android:checked="true"
+                android:drawableLeft="@drawable/ic_map_white"
+                android:drawablePadding="@dimen/margin_3"
+                android:gravity="center"
+                android:paddingBottom="@dimen/margin_8"
+                android:paddingLeft="@dimen/margin_30"
+                android:paddingRight="@dimen/margin_20"
+                android:paddingTop="@dimen/margin_8"
+                android:text="地图"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_14" />
+
+            <RadioButton
+                android:id="@+id/rb_stations"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rb_blue_gray_right_selector"
+                android:button="@null"
+                android:drawableLeft="@drawable/ic_sta_26"
+                android:drawablePadding="@dimen/margin_3"
+                android:gravity="center"
+                android:paddingBottom="@dimen/margin_8"
+                android:paddingLeft="@dimen/margin_20"
+                android:paddingRight="@dimen/margin_30"
+                android:paddingTop="@dimen/margin_8"
+                android:text="站点"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_14" />
+
+        </RadioGroup>
+
+    </RelativeLayout>
+
+</LinearLayout>

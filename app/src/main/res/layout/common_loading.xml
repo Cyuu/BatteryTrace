@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/common_loading"
+    android:layout_width="match_parent"
+    android:background="@color/gray_bg"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <com.thdz.bt.view.ProgressWheel
+        android:id="@+id/common_bar"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:indeterminateDrawable="@anim/ring_bar_green"
+        wheel:matProg_barColor="@color/blue_color"
+        wheel:matProg_progressIndeterminate="true" />
+
+    <TextView
+        android:id="@+id/common_null_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:drawablePadding="@dimen/margin_5"
+        android:visibility="gone"
+        android:drawableTop="@drawable/ic_fail"
+        android:text="戳这儿重试"
+        android:textColor="@color/black_light"
+        android:textSize="@dimen/txt_15" />
+
+</RelativeLayout>

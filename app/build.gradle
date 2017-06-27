@@ -1,0 +1,140 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+apply plugin: 'com.neenbedankt.android-apt'//使用butterknife；eventbus的注解索引特性也需要这个插件
+//apply plugin: 'com.antfortune.freeline'
+
+repositories {
+    flatDir {
+        dir 'libs'
+    }
+}
+
+android {
+
+    // 签名配置
+//    signingConfigs {
+//        config {
+//            keyAlias 'thdz'
+//            keyPassword 'galaxyycy'
+//            storeFile file('C:/Users/Administrator/thdz.jks')
+//            storePassword 'yangchunyu'
+//        }
+//    }
+
+    compileSdkVersion 24
+    buildToolsVersion '25.0.0'
+    defaultConfig {
+        applicationId "com.thdz.bt"
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 2
+        versionName "1.0.0.1"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        // 个推参数 for 签名：thdz.jks
+        manifestPlaceholders = [
+                GETUI_APP_ID    : "XGIWIRJFfJ8tPcePo3qSo6",
+                GETUI_APP_KEY   : "x3ooYLGklv7ZYpFv2o6V78",
+                GETUI_APP_SECRET: "r0ml1nB1hG8P2qzVpYGk23",
+                PACKAGE_NAME    : applicationId
+        ]
+
+
+        ndk {
+            // 设置支持的SO库架构.目的是确保最终的 apk 中只包含指定 cpu 架构文件
+            // 百度地图的导航功能呢支持如下三个，不支持64的so
+            // 选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi'
+            //, 'armeabi-v7a', 'armeabi-v8a', 'x86', 'x86_64', 'mips', 'mips64'
+
+            // 个推配置
+            // abiFilters "armeabi", "armeabi-v7a", "x86_64"
+        }
+
+        multiDexEnabled true
+
+        packagingOptions {
+            exclude "lib/libgnustl_shared.so"
+        }
+
+    }
+    buildTypes {
+
+        release {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+    }
+
+//    compileOptions {
+//        sourceCompatibility JavaVersion.VERSION_1_6
+//        targetCompatibility JavaVersion.VERSION_1_6
+//    }
+
+
+    sourceSets {
+        main {
+            // jniLibs.srcDir 'libs'
+            jniLibs.srcDirs = ['libs']
+        }
+
+        // Move the build types to build-types/<type>
+        // For instance, build-types/debug/java, build-types/debug/AndroidManifest.xml, ...
+        // This moves them out of them default location under src/<type>/... which would
+        // conflict with src/ being used by the main source set.
+        // Adding new build types or product flavors should be accompanied
+        // by a similar customization.
+        debug.setRoot('build-types/debug')
+        release.setRoot('build-types/release')
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+}
+
+apt {
+    arguments {
+        eventBusIndex "com.thdz.bt.MyEventBusIndex" //eventbus注解特性需要的索引
+    }
+}
+
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile project(':dtchooser')
+
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    testCompile 'junit:junit:4.12'
+
+    // okhttpUtils的引用
+    compile 'com.zhy:okhttputils:2.6.2'
+
+    //SwipyRefreshLayout 允许上下两方向刷新的SwipeRefreshLayout扩展。
+    compile 'com.github.orangegangsters:swipy:1.2.3@aar'
+
+    compile 'com.android.support:support-v4:24.1.1'
+    compile 'com.android.support:appcompat-v7:24.1.1'
+    compile 'com.android.support:design:24.1.1'
+    compile 'com.jakewharton:butterknife:8.1.0'
+
+    compile 'com.android.support:cardview-v7:24.1.1'
+    // compile 'com.android.support:recyclerview-v7:24.1.1'
+
+    // eventbus
+    compile 'org.greenrobot:eventbus:3.0.0'
+    apt 'org.greenrobot:eventbus-annotation-processor:3.0.1'
+
+    // 个推  最新 2.10.2.0   <---  2.9.0.0
+    compile 'com.getui:sdk:2.10.2.0'
+
+    // 使用butterknife
+    apt 'com.jakewharton:butterknife-compiler:8.1.0'
+
+}
